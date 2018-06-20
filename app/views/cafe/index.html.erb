@@ -1,0 +1,6 @@
+<div>
+<%@cafes.each do |cafe|%>
+<a href = "/cafe/<%=cafe.id%>"><%=cafe.title%></a><br/> 
+<%end%>
+</div>
+<%=link_to "새글쓰기" ,"/cafe/new"%>

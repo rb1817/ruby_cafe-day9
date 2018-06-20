@@ -1,0 +1,5 @@
+<%= form_tag("/cafe/#{@cafe.id}",method:"patch") do%>
+    <%=text_field_tag(:title,@cafe.title)%>
+    <%=text_area(:description,@cafe.description)%>
+    <%=submit_tag("저장하기")%>
+<%end%>
