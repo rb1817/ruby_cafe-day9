@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     
     get '/users' => 'user#index'
     get '/sign_up' => 'user#new'
+    get '/sign_in' => 'user#sign_in'
+    post '/sign_in' => 'user#login'
+    get  '/logout' => 'user#logout'
     get '/user/:id' => 'user#show'
     post '/users' => 'user#create'
     get '/user/:id/edit' => 'user#edit'

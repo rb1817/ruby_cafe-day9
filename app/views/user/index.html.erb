@@ -1,3 +1,12 @@
+<% if @current_user.nil?%>
+    <!-- 로그인 되지않는 상태 -->
+    <%= link_to '로그인','/sign_in'%>
+<%else%>
+    <!-- 로그인 된 상태 -->
+    <p>현재 로그인 된 유저 : <%=@current_user.name%></p>
+    <%=link_to '로그아웃','/logout'%>
+<%end%>
+
 <div>
 <%@users.each do |user|%>
 <a href="/user/<%=user.id%>"><%= user.name%></a><br/> 
