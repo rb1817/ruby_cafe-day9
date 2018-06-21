@@ -1,10 +1,10 @@
 <% if @current_user.nil?%>
     <!-- 로그인 되지않는 상태 -->
-    <%= link_to '로그인','/sign_in'%>
+    <%= link_to '로그인','/sign_in',class:"btn btn-warning"%>
 <%else%>
     <!-- 로그인 된 상태 -->
     <p>현재 로그인 된 유저 : <%=@current_user.name%></p>
-    <%=link_to '로그아웃','/logout'%>
+    <%=link_to '로그아웃','/logout',class:"btn btn-warning"%>
 <%end%>
 
 <div>
@@ -13,4 +13,4 @@
 <%end%>
 </div>
 
-<%= link_to "새글쓰기","/sign_up"%>
+<%= link_to "계정만들기","/sign_up",class:"btn btn-primary"%>
